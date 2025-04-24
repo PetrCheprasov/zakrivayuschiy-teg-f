@@ -44,12 +44,6 @@
     transition: fill var(--time_step) ease 0.05s;
 }
 
-.card__icon-button:active .core {
-    fill: var(--heart-sparks-color);
-    transition: fill var(--time_step) ease;
-}
-
-/*АКТИВНОЕ СОСТОЯНИЕ*/
 /*ЛАЙК*/
 
 .card__icon-button .is-liked .core {
