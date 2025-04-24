@@ -94,6 +94,7 @@
   opacity: 0.5;
   right: 25px;
   top: 25px;
+  font-size: 14px;
   text-transform: uppercase;
   font-family: var(--backup-font);
   font-weight: var(--text-weight);
@@ -159,6 +160,10 @@ transition: outline 0.3s ease;
   opacity: 0;
 }
 
+.heart {
+  transform-origin: center;
+}
+
 .card__like-button {
   align-self: end;
   width: 130px;
@@ -173,6 +178,8 @@ transition: outline 0.3s ease;
   border: none;
   outline: none;
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .decorated_button_text {
@@ -244,7 +251,7 @@ z-index: 1;
 
 .dialog_floppy_svg {
 block-size: 40px;
-width: 200px;
+width: 100px;
 mix-blend-mode: difference;
 position: relative;
 color: white;
@@ -260,7 +267,6 @@ color: white;
 
 .floppy_dialog[open] {
   inline-size: 357px;
-  padding: 30px;
   flex-shrink: 0;
   border: var(--main-border);
 }
