@@ -10,7 +10,387 @@
 
 */
 
+.main,
+.header {
+  width: var(--page-width);
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--base-font), var(--backup-font);
+  font-variation-settings: "wght" var(--text-weight);
+  background-image: var(--background-image);
+  background-size: cover;
+  font-size: var(--font-size);
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+  margin-block-end: 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  flex-direction: column;
+  outline: 2px solid var(--color);
+  background-color: var(--background-color);
+  font-weight: var(--text-weight);
+  font-family: var(--backup-font);
+  margin-block: 102px;
+  padding-block: 128px;
+}
+
+.header_title {
+  margin-block-end: 20px;
+  line-height: 100%;
+  font-size: var(--header-title-font-size);
+  font-weight: var(--text-weight);
+  font-size: var(--header-title-font-size);
+  font-weight: var(--text-weight);
+}
+
+.header_subtitle {
+  font-size: var(--header-subtitle-font-size);
+}
+
+.header_size {
+  width: var(--content-size);
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+  margin-block-end: 100px;
+}
+
+.article {
+  background-color: var(--background-color);
+  margin-bottom: 52px;
+  width: 100%;
+  outline: 2px solid var(--color);
+}
+
+.article_title {
+  font-variation-settings: "wght" var(--title-weight);
+  background-color: var(--background-color);
+  color: var(--color);
+  font-size: var(--font-size);
+  padding: 3px 10px;
+}
+
+.images_article {
+  position: relative;
+  outline: var(--main-border);
+  margin: 0px 0px 2px 0px;
+}
+
+.article_label {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.5;
+  right: 25px;
+  top: 25px;
+  text-transform: uppercase;
+  font-family: var(--backup-font);
+  font-weight: var(--text-weight);
+  color: #000;
+  mix-blend-mode: hard-light;
+  text-shadow: 0 0 1px var(--shadow-color);
+}
+
+@supports (
+  (text-stroke: 1px var(--shadow-color)) or
+    (-webkit-text-stroke: 1px var(--shadow-color))) {
+  .card_label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--shadow-color);
+    text-stroke: 1px var(--shadow-color);
+  }
+}
+
+.card_image {
+  display: block;
+  object-position: center;
+  object-fit: cover;
+  max-block-size: 100%;
+  inline-size: 100%;
+}
+
+.article_info {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  padding: 25px 25px;
+}
+
+.article_text:last-of-type {
+  margin-block-end: 25px;
+}
+
+.article_text:not(:last-child) {
+  margin-block-end: 27px;
+}
+
+/*ВСЕ ПРО КНОПКУ НИЖЕ*/
+
+.button_block {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 12px;
+}
+
+.card__icon-button {
+display: flex;
+align-self: center;
+border: none;
+padding-inline: 0;
+height: 27px;
+background-color: transparent;
+outline: 2px solid transparent;
+transition: outline 0.3s ease;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__like-button {
+  align-self: end;
+  width: 130px;
+  height: 38px;
+  padding-block: 12.5px;
+}
+
+.like-icon {
+  width: 39px;
+  height: 36px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.decorated_button_text {
+  font-size: var(--button-font-size);
+  mix-blend-mode: difference;
+
+}
+
+.button__text {
+  display: flex;
+  justify-content: center;
+}
+
+.decoration_button {
+  position: relative;
+  background-color: var(--background-color);
+  color: #fff;
+  border: 2px solid var(--color);
+  cursor: pointer;
+  font-family: var(--backup-font);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.decoration_button::before {
+  content: "";
+  position: absolute;
+  background: var(--color);
+  inset: 0;
+  transition: translate 0.5s ease-in-out;
+  translate: -100%;
+}
+
+.decoration_button:focus-visible {
+  outline: 2px solid var(--color);
+}
+
+.decoration_button:focus {
+  box-shadow: 2px 2px 0 1px var(--color);
+  outline: none;
+}
+
+.decoration_button:hover::before {
+  translate: 0%;
+}
+
+.save_button {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  margin: 0 auto 80px;
+  width: 340px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+}
+/*ВСЕ ПРО КНОПКУ ВЫШЕ*/
+
+/*ДИАЛОГ*/
+
+.floppy_svg {
+block-size: 21px;
+width: 21px;
+mix-blend-mode: difference;
+position: relative;
+color: white;
+z-index: 1;
+}
+
+.dialog_floppy_svg {
+block-size: 40px;
+width: 200px;
+mix-blend-mode: difference;
+position: relative;
+color: white;
+}
+
+.mix_difference {
+  mix-blend-mode: difference;
+  background-color: transparent;
+  fill: white;
+  color: #fff;
+}
+
+
+.floppy_dialog[open] {
+  inline-size: 357px;
+  padding: 30px;
+  flex-shrink: 0;
+  border: var(--main-border);
+}
+
+.floppy_dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+body:has(.floppy_dialog[open]) {
+  overflow: hidden;
+}
+
+.dialog_label{
+  font-family: var(--backup-font);
+  align-self: flex-start;
+  text-align: left;
+  line-height: 150%;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: fit-content;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+}
+
+.dialog_description {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-block: 30px;
+}
+
+.dialog_button {
+  min-block-size: 38px;
+  inline-size: 100%;
+}
+
+
+/*ФИЛЬТРЫ КАРТОЧЕК НИЖЕ*/
+
+.sprint {
+  filter: brightness(100%);
+}
+
+.sprint_html{
+  filter: brightness(200%) opacity(0.8);
+}
+
+.sprint_css{
+  filter: brightness(50%) blur(0.5rem);
+}
+
+.spint_desigions{
+  filter: brightness(120%) sepia(80%);
+}
+
+.sprint_care{
+  filter: brightness(150%) saturate(600%);
+}
+
+.sprint_support{
+  filter: brightness(110%) hue-rotate(-90deg);
+}
+
+.sprint_life-stile{
+  filter: brightness(100%) grayscale(0.8);
+}
+
+.spint_experience{
+  filter: brightness(100%) contrast(50%);
+}
+
+/*ФИЛЬТРЫ КАРТОЧЕК ВЫШЕ*/
+
+@media (width <= 375px) {
+
+  .main,
+  .header,
+  .footer {
+    width: 100%;
+  }
+
+  .header {
+    margin-top: 27vw;
+    margin-bottom: 28vw;
+    block-size: 325px;
+  }
+
+  .header_title {
+    letter-spacing: normal;
+    line-height: 49px;
+  }
+
+  .main {
+    row-gap: 54px;
+  }
+
+  .article_info {
+    padding: 20px 27px 25px 27px;
+  }
+
+  .floppy_svg {
+    width: 100px;
+    height: 28px;
+  }
+
+  .card_label {
+    top: 20px;
+    right: 10px;
+  }
+
+  .save_button {
+    flex-direction: column;
+    width: 312px;
+    height: 84px;
+    gap: 4px;
+    margin: 0;
+    gap: 4px;
+  }
+
+  .decorated_button_text {
+    margin-right: 2px;
+    margin-bottom: 4px;
+  }
 }
