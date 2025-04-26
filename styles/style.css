@@ -25,11 +25,11 @@
   font-size: var(--font-size);
   background-position: center;
   background-attachment: fixed;
-
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: auto;
+  background-color: var(--page-background-color);
 }
 
 .main {
@@ -63,13 +63,9 @@
   font-size: var(--header-subtitle-font-size);
 }
 
-.header_size {
-  width: var(--content-size);
-}
-
 .article {
   background-color: var(--background-color);
-  margin-bottom: 52px;
+  margin-block-end: 50px;
   width: 100%;
   outline: 2px solid var(--color);
 }
@@ -80,6 +76,7 @@
   color: var(--color);
   font-size: var(--font-size);
   padding: 3px 10px;
+  height: 31px;
 }
 
 .images_article {
@@ -119,6 +116,7 @@
   object-fit: cover;
   max-block-size: 100%;
   inline-size: 100%;
+  height: 696px;
 }
 
 .article_info {
@@ -146,14 +144,11 @@
 }
 
 .card__icon-button {
-display: flex;
-align-self: center;
 border: none;
 padding-inline: 0;
-height: 27px;
 background-color: transparent;
 outline: 2px solid transparent;
-transition: outline 0.3s ease;
+transition: outline var(--time_step) ease;
 }
 
 .sparks {
@@ -185,6 +180,7 @@ transition: outline 0.3s ease;
 .decorated_button_text {
   font-size: var(--button-font-size);
   mix-blend-mode: difference;
+  text-transform: uppercase;
 
 }
 
@@ -214,11 +210,10 @@ transition: outline 0.3s ease;
 }
 
 .decoration_button:focus-visible {
-  outline: 2px solid var(--color);
+box-shadow: 2px 2px 0 1px var(--color);
 }
 
 .decoration_button:focus {
-  box-shadow: 2px 2px 0 1px var(--color);
   outline: none;
 }
 
@@ -247,6 +242,7 @@ mix-blend-mode: difference;
 position: relative;
 color: white;
 z-index: 1;
+margin-right: 8px;
 }
 
 .dialog_floppy_svg {
@@ -264,11 +260,13 @@ color: white;
   color: #fff;
 }
 
-
 .floppy_dialog[open] {
-  inline-size: 357px;
+  inline-size: 353px;
+  height: 193px;
   flex-shrink: 0;
   border: var(--main-border);
+  padding-block: 0px;
+  justify-items: center;
 }
 
 .floppy_dialog[open]::backdrop {
@@ -295,6 +293,7 @@ body:has(.floppy_dialog[open]) {
 .dialog_description {
   display: flex;
   align-items: center;
+  width: 293px;
   gap: 20px;
   padding-block: 30px;
 }
@@ -304,38 +303,44 @@ body:has(.floppy_dialog[open]) {
   inline-size: 100%;
 }
 
+.button_ok {
+  display: flex;
+  justify-content: center;
+  width: 293px;
+}
+
 
 /*ФИЛЬТРЫ КАРТОЧЕК НИЖЕ*/
 
-.sprint {
+.filter__brightness {
   filter: brightness(100%);
 }
 
-.sprint_html {
+.filter__opacity {
   filter: brightness(200%) opacity(0.8);
 }
 
-.sprint_css {
+.filter__blur {
   filter: brightness(50%) blur(0.5rem);
 }
 
-.spint_desigions {
+.filter__sepia {
   filter: brightness(120%) sepia(80%);
 }
 
-.sprint_care {
+.filter__saturate {
   filter: brightness(150%) saturate(600%);
 }
 
-.sprint_support {
+.filter__hue-rotate {
   filter: brightness(110%) hue-rotate(-90deg);
 }
 
-.sprint_life-stile {
+.filter__grayscale {
   filter: brightness(100%) grayscale(0.8);
 }
 
-.spint_experience {
+.filter__contrast {
   filter: brightness(100%) contrast(50%);
 }
 
@@ -360,6 +365,10 @@ body:has(.floppy_dialog[open]) {
     line-height: 49px;
   }
 
+  .article_title_one {
+    height: 52px;
+  }
+
   .main {
     row-gap: 54px;
   }
@@ -376,6 +385,10 @@ body:has(.floppy_dialog[open]) {
   .card_label {
     top: 20px;
     right: 10px;
+  }
+
+  .card_image {
+    height: 371px;
   }
 
   .save_button {

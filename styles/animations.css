@@ -19,6 +19,11 @@
     transition: fill var(--time_step) ease 0s;
   }
 
+.contour {
+    fill: var(--heart-contour-color);
+    transition: fill var(--time_step) linear;
+  }
+
   /*ХОВЕР*/
 
 .card__icon-button:hover .core {
@@ -73,7 +78,6 @@
 
 .card__icon-button:focus-visible {
     outline-color: black;
-    transition:  outline-color var(--time_step) linear;
 }
 
 /*ЛАЙК*/

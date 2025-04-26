@@ -5,7 +5,6 @@
     --text-weight: 400;
     --title-weight: 700;
     --font-size: 18px;
-    --content-size: 375px, 100%, 700px;
     --main-border: 2px solid black;
     --button-font-size: 14px;
     --heart-contour-color: black;
@@ -16,6 +15,7 @@
     --color: #000;
     --background-color: #fff;
     --shadow-color: #fff;
+    --page-background-color: #808080;
 
 
     --header-title-font-size: clamp(3.063rem, 1.909rem + 4.92vw, 4.063rem);
