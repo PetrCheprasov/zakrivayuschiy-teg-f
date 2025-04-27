@@ -21,7 +21,7 @@
 
 .contour {
     fill: var(--heart-contour-color);
-    transition: fill var(--time_step) linear;
+    transition: fill 0.1s linear;
   }
 
   /*ХОВЕР*/

@@ -65,7 +65,7 @@
 
 .article {
   background-color: var(--background-color);
-  margin-block-end: 50px;
+  margin-block-end: 53px;
   width: 100%;
   outline: 2px solid var(--color);
 }
@@ -75,8 +75,7 @@
   background-color: var(--background-color);
   color: var(--color);
   font-size: var(--font-size);
-  padding: 3px 10px;
-  height: 31px;
+  padding: 5px 10px;
 }
 
 .images_article {
@@ -92,7 +91,6 @@
   right: 25px;
   top: 25px;
   font-size: 14px;
-  text-transform: uppercase;
   font-family: var(--backup-font);
   font-weight: var(--text-weight);
   color: #000;
@@ -116,7 +114,7 @@
   object-fit: cover;
   max-block-size: 100%;
   inline-size: 100%;
-  height: 696px;
+  height: 698px;
 }
 
 .article_info {
@@ -140,15 +138,15 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 12px;
+  gap: 8px;
 }
 
 .card__icon-button {
-border: none;
-padding-inline: 0;
-background-color: transparent;
-outline: 2px solid transparent;
-transition: outline var(--time_step) ease;
+  border: none;
+  padding-inline: 0;
+  background-color: transparent;
+  outline: 2px solid transparent;
+  transition: outline var(--time_step) ease;
 }
 
 .sparks {
@@ -163,7 +161,7 @@ transition: outline var(--time_step) ease;
   align-self: end;
   width: 130px;
   height: 38px;
-  padding-block: 12.5px;
+  padding-block: 10.5px;
 }
 
 .like-icon {
@@ -180,8 +178,6 @@ transition: outline var(--time_step) ease;
 .decorated_button_text {
   font-size: var(--button-font-size);
   mix-blend-mode: difference;
-  text-transform: uppercase;
-
 }
 
 .button__text {
@@ -210,7 +206,7 @@ transition: outline var(--time_step) ease;
 }
 
 .decoration_button:focus-visible {
-box-shadow: 2px 2px 0 1px var(--color);
+  box-shadow: 2px 2px 0 1px var(--color);
 }
 
 .decoration_button:focus {
@@ -236,21 +232,21 @@ box-shadow: 2px 2px 0 1px var(--color);
 /*ДИАЛОГ*/
 
 .floppy_svg {
-block-size: 21px;
-width: 21px;
-mix-blend-mode: difference;
-position: relative;
-color: white;
-z-index: 1;
-margin-right: 8px;
+  block-size: 21px;
+  width: 21px;
+  mix-blend-mode: difference;
+  position: relative;
+  color: white;
+  z-index: 1;
+  margin-right: 8px;
 }
 
 .dialog_floppy_svg {
-block-size: 40px;
-width: 100px;
-mix-blend-mode: difference;
-position: relative;
-color: white;
+  block-size: 40px;
+  width: 100px;
+  mix-blend-mode: difference;
+  position: relative;
+  color: white;
 }
 
 .mix_difference {
@@ -282,19 +278,25 @@ body:has(.floppy_dialog[open]) {
   align-self: flex-start;
   text-align: left;
   line-height: 150%;
-  font-size: 14px;
   font-weight: 400;
-  text-transform: uppercase;
   width: fit-content;
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
+  font-size: var(--button-font-size);
+  text-transform: uppercase;
+}
+
+.dialog_decoration_text {
+  font-size: var(--button-font-size);
+  mix-blend-mode: difference;
+  text-transform: uppercase;
 }
 
 .dialog_description {
   display: flex;
   align-items: center;
   width: 293px;
-  gap: 20px;
+  gap: 12px;
   padding-block: 30px;
 }
 
@@ -357,7 +359,6 @@ body:has(.floppy_dialog[open]) {
   .header {
     margin-top: 27vw;
     margin-bottom: 28vw;
-    block-size: 325px;
   }
 
   .header_title {
@@ -365,20 +366,12 @@ body:has(.floppy_dialog[open]) {
     line-height: 49px;
   }
 
-  .article_title_one {
-    height: 52px;
-  }
-
-  .main {
-    row-gap: 54px;
-  }
-
   .article_info {
-    padding: 20px 27px 25px 27px;
+    padding: 25px 12px 25px 27px;
   }
 
   .floppy_svg {
-    width: 100px;
+    width: 28px;
     height: 28px;
   }
 
@@ -388,14 +381,14 @@ body:has(.floppy_dialog[open]) {
   }
 
   .card_image {
-    height: 371px;
+    height: 372px;
   }
 
   .save_button {
     flex-direction: column;
     width: 312px;
     height: 84px;
-    gap: 4px;
+    gap: 8px;
     margin: 0;
   }
 
@@ -403,4 +396,17 @@ body:has(.floppy_dialog[open]) {
     margin-right: 2px;
     margin-bottom: 4px;
   }
+
+  .floppy_dialog[open] {
+    inline-size: 341px;
+    height: 195px;
+    flex-shrink: 0;
+    border: var(--main-border);
+    padding-block: 0px;
+    justify-items: center;
+}
+
+.article_label {
+  right: 0px;
+}
 }
