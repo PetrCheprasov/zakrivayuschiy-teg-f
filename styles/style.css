@@ -258,7 +258,6 @@
 
 .floppy_dialog[open] {
   inline-size: 353px;
-  height: 193px;
   flex-shrink: 0;
   border: var(--main-border);
   padding-block: 0px;
@@ -399,7 +398,6 @@ body:has(.floppy_dialog[open]) {
 
   .floppy_dialog[open] {
     inline-size: 341px;
-    height: 195px;
     flex-shrink: 0;
     border: var(--main-border);
     padding-block: 0px;
