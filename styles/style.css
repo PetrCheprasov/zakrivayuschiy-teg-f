@@ -48,7 +48,7 @@
   background-color: var(--background-color);
   font-weight: var(--text-weight);
   font-family: var(--backup-font);
-  margin-block: 102px;
+  margin-block: 100px;
   padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
 }
 
@@ -89,7 +89,7 @@
   z-index: 1;
   opacity: 0.5;
   right: 25px;
-  top: 25px;
+  top: 27px;
   font-size: 14px;
   font-family: var(--backup-font);
   font-weight: var(--text-weight);
@@ -129,7 +129,7 @@
 }
 
 .article_text:not(:last-child) {
-  margin-block-end: 27px;
+  margin-block-end: 25px;
 }
 
 /*ВСЕ ПРО КНОПКУ НИЖЕ*/
@@ -138,7 +138,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 8px;
+  gap: 4px;
 }
 
 .card__icon-button {
@@ -260,7 +260,7 @@
   inline-size: 353px;
   flex-shrink: 0;
   border: var(--main-border);
-  padding-block: 0px;
+  padding-block: 30px;
   justify-items: center;
 }
 
@@ -296,7 +296,7 @@ body:has(.floppy_dialog[open]) {
   align-items: center;
   width: 293px;
   gap: 12px;
-  padding-block: 30px;
+  padding-bottom: 30px;
 }
 
 .dialog_button {
@@ -395,7 +395,7 @@ body:has(.floppy_dialog[open]) {
     inline-size: 341px;
     flex-shrink: 0;
     border: var(--main-border);
-    padding-block: 0px;
+    padding-block: 30px;
     justify-items: center;
 }
 
